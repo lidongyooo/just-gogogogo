@@ -80,14 +80,6 @@ class UsersObserver
 
 ## 4、解决异常
 
-
-
-## 4、解决异常
-
-## 4、解决异常
-
-## 4、解决异常
-
 ### 1. 修改 MySQL 事务隔离级别（不推荐）
 
 这里涉及到 MySQL 的事务隔离级别，InnoDB 引擎的默认隔离级别是 REPEATABLE READ，关于各个级别的区别可以在[官方文档](https://dev.mysql.com/doc/refman/8.0/en/innodb-transaction-isolation-levels.html)找到。

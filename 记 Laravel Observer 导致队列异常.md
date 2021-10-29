@@ -24,10 +24,10 @@
     }
 ```
 
-```App\Observers\UsersObserver``` 
+```App\Observers\UserObserver``` 
 
 ```php
-class UsersObserver
+class UserObserver
 {
     public function created (User $user)
     {
@@ -184,14 +184,14 @@ class UsersObserver
    
    ```
 
-5. 更改调用方式  ```App\Observers\UsersObserver``` 
+5. 更改调用方式  ```App\Observers\UserObserver``` 
 
 ```php
-class UsersObserver
+class UserObserver
 {
     public function created (User $user)
     {
-        after_transaction(function(){
+        after_transaction(function() use ($user) {
             dispatch(new SmsQueue($user));
         });
     }
